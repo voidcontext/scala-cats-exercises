@@ -1,5 +1,6 @@
 package vdx.exercise01
 
+// Section 1.3
 package object printable {
   final case class Cat(name: String, age: Int, color: String)
 

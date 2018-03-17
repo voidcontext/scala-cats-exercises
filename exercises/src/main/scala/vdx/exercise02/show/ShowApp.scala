@@ -6,13 +6,14 @@ import cats.instances.int._
 import cats.instances.string._
 import vdx.exercise01.printable.Cat
 
+// Section 1.4.6
 object ShowApp extends App {
 
   implicit val CatPrintable: Show[Cat] = new Show[Cat] {
     def show(value: Cat): String = {
       val name = value.name.show
       val age = value.age.show
-      val color= value.color.show
+      val color = value.color.show
 
       s"${name} is a ${age} year-old ${color} cat."
     }
