@@ -5,8 +5,9 @@ import cats.instances.AllInstances
 import cats.laws.discipline.FunctorTests
 import cats.syntax.AllSyntax
 import org.scalatest.FunSuite
+import vdx.TreeInstances
 
-class FunctorSpec extends FunSuite with Discipline with AllSyntax with AllInstances {
+class FunctorSpec extends FunSuite with Discipline with AllSyntax with AllInstances with TreeInstances {
 
-//  checkAll("TreeFunctor", FunctorTests(treeFunctor).functor)
+  checkAll("TreeFunctor", FunctorTests(treeFunctor).functor[Int, Int, Int])
 }

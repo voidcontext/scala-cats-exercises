@@ -16,6 +16,7 @@ package object state {
     sym match {
       case "+" => calc(oldStack, _ + _)
       case "-" => calc(oldStack, _ - _)
+      case "*" => calc(oldStack, _ * _)
       case _ =>
         (sym.toInt :: oldStack, sym.toInt)
     }
